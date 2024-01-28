@@ -1,9 +1,15 @@
+use std::env;
 use std::path::Path;
-// use std::fs;
 use walkdir::WalkDir;
 
 fn main() {
-    let apath = Path::new("/media/pipi/taz/PicCD3");
+    let args: Vec<String> = env::args().collect();
+    if args.len() < 2 {
+        println!("Usage: cargo run -- <apath>");
+        return;
+    }
+
+    let apath = Path::new(&args[1]);
     let mut ext_vec = Vec::new();
     let mut count = 0;
 
