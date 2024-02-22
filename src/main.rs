@@ -30,5 +30,5 @@ fn main() {
             }
         }
     }
-    println!("Start count: {}\nFiles removed: {:#?}", count, &ext_vec);
+    println!("Start count: {}\nExt List: {:#?}", count, &ext_vec);
 }
